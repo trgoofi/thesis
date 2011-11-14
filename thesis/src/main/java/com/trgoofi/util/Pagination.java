@@ -1,7 +1,6 @@
 package com.trgoofi.util;
 
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -24,41 +23,6 @@ public class Pagination<E> {
   private int totalItems;
   
   private List<E> items = Collections.emptyList();
-  
-  
-  /*
-  private Pagination() {}
-  
-  public Pagination(List<E> items, int totalItems) {
-    
-    this(items, totalItems, DEFAULT_START_ITEM, DEFAULT_ITEMS_PER_PAGE,
-        DEFAULT_PAGES_TO_CURRENT_PAGE);
-  }
-  
-  public Pagination(List<E> items, int totalItems, int startItem) {
-    
-    this(items, totalItems, startItem, DEFAULT_ITEMS_PER_PAGE,
-        DEFAULT_PAGES_TO_CURRENT_PAGE);
-  }
-  
-  public Pagination(List<E> items, int totalItems, int startItem,
-                    int itemsPerPage) {
-    
-    this(items, totalItems, startItem, itemsPerPage,
-        DEFAULT_PAGES_TO_CURRENT_PAGE);
-    
-  }
-  
-  public Pagination(List<E> items, int totalItems, int startItem,
-                    int itemsPerPage, int pagesToCurrentPage){
-    
-    setItems(items);
-    setTotalItems(totalItems);
-    setStartItem(startItem);
-    setItemsPerPage(itemsPerPage);
-    setPagesToCurrentPage(pagesToCurrentPage);
-  }
-  */
   
   public Pagination(PaginationMaker<E> maker) {
     this.itemsPerPage       = maker.itemsPerPage;
